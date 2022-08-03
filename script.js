@@ -8,20 +8,20 @@ var number = ["0","1","2","3","4","5","6","7","8","9"]
 // Assignment code here
 var getRandomLower= Math.floor(Math.random() * lowercase.length);
     console.log (getRandomLower,lowercase[getRandomLower]);
-    //lowercase[getRandomLower] will exicute only once 
+
 var getRandomUpper = Math.floor(Math.random() * uppercase.length);
     console.log (getRandomUpper,uppercase[getRandomUpper]);
+
 var getRandomNumber = Math.floor(Math.random() * number.length);
     console.log (getRandomNumber,number[getRandomNumber]);
+
 var getRandomSymbol = [Math.floor(Math.random() * special.length)];
     console.log (getRandomSymbol,special[getRandomSymbol]);
-
-
 
  
 
 // // Write password to the #password input
-function writePassword() {  
+ function writePassword(){  
   characters = window.prompt ("How many characters would you like?");
 
   console.log(characters,typeof characters);
@@ -39,31 +39,22 @@ function writePassword() {
   special = window.confirm ("Would you like to include a special character?");
   number = window.confirm ("Would you like to include a number?");
   for (var i=0; i < length; i++)   {
-//if selected then include element that was selected
+    String.fromCharCode (lowercase[getRandomLower]).textContent;
+    String.fromCharCode (uppercase[getRandomUpper]).textContent;
+    String.fromCharCode (special[getRandomSymbol]).textContent;
+    String.fromCharCode (number[getRandomNumber]).textContent;
+//if selected then include elements that was selected
 //if was selected go into array depends on amount of characters
-//lowercase[getRandomLower]
-  };
- 
- 
 
 
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.getElementById("#password");
 
   passwordText.value = password;
 
 }
+};
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword) 
 
   // click button then generated prompts for password criteria options
-  var generatePassword = {
-    getRandomLower,
-    getRandomUpper,
-    getRandomNumber,
-    getRandomSymbol
-  };
-
-  
-  
- 
